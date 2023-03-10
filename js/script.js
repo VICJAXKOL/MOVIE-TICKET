@@ -78,3 +78,16 @@ function showMovie(movieId) {
   }
 }
 
+function attachContactListeners() {
+  $("ol#movies").on("click", "li", function () {
+    showMovie(this.id);
+  });
+  $("#buttons").on("click", ".deleteButton", function () {
+    ticket.deleteMovie(this.id);
+    $("#show-movie").hide();
+    displayMovieDetails(ticket);
+  });
+  $(".s-movie").on("click", function () {
+    window.location.href = "ticket.html"
+  });
+}
