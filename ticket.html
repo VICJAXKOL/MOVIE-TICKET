@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie-ticket</title>
+    <script src="https://kit.fontawesome.com/bf30d47bb2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.6.1.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <nav style="display: flex;">
+        <img src="image/m-logo.png" alt="logo" class="logo">
+        <div>
+            <ul id="navbar" class="link">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="ticket.html">Ticket Booking</a></li>
+            </ul>
+        </div>
+        <div class="mobile">
+            <i class="fa-solid fa-bag-shopping" id="bag"></i></a>
+            <i id="bars" class="fa-solid fa-bars"></i>
+
+        </div>
+    </nav>
+
+    <div id="ticket">
+        <div class="head">
+            <img src="image/Cinema.png" class="logo">
+            <h2>Online Movie Ticket Booking</h2>
+        </div>
+
+        <!-- user input page -->
+        <form>
+            <div class="gen form-control container">
+
+                <div class="select-movie">
+                    <div class="form">
+                        <label for="">select movie:</label>
+                        <select name="move-name" id="movie-name" class="form-control" style="padding-right: 200px;"
+                            required>
+                            <option value="">Select any movie</option>
+                            <option value="Top Gun Maverick">Top Gun Maverick</option>
+                            <option value="Wakanda Forever">Wakanda Forever</option>
+                            <option value="Adams Project">Adams Project</option>
+                            <option value="Woman King">Woman King</option>
+                            <option value="Enola Holmes2">Enola Holmes2</option>
+                            <option value="Black Adam">Black Adam</option>
+                            <option value="Avatar2">Avatar2</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                        <label for="">How many seats?</label>
+                        <select name="seat" id="movie-seat" class="form-control" style="padding-right: 200px;" required>
+                            <option value="">select seats</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    <div class="form">
+                        <label for="">select movie timing:</label>
+                        <select name="price" id="movie-time" class="form-control" style="padding-right: 200px;"
+                            required>
+                            <option value="">Select time</option>
+                            <option value="Morning">Morning</option>
+                            <option value="Afternoon">Afternoon</option>
+                            <option value="Evening">Evening</option>
+                        </select>
+                    </div>
+                </div>
+                <input type="submit" value="submit" class="btn btn-primary" id="button">
+            </div>
+        </form>
+
+
+        <form id="last-form">
+            <!-- user output page -->
+            <div class="gen form-control container">
+                <h2 class="text-center">Ticket Order list </h2>
+                <ol id="movies">
+                </ol>
+                <div class="col-md-6">
+                    <div id="show-movie">
+                        <img src="image/top gun.jpg" alt="" id="image1">
+                        <img src="image/Black-Panther-Wakanda-Forever-1140x760.webp" alt="" id="image2">
+                        <img src="image/adams project.jpg" alt="" id="image3">
+                        <img src="image/15womanking-review-articleLarge.webp" alt="" id="image4">
+                        <img src="image/enola.jpg" alt="" id="image5">
+                        <img src="image/black adam.jpg" alt="" id="image6">
+                        <img src="image/avater2.jpg" alt="" id="image7">   
+                        <p>Movie Name: <span class="movie-name"></span></p>
+                        <p>Seat Number: <span class="movie-seat"></span></p>
+                        <p>Movie Time: <span class="movie-time"></span></p>
+                        <p>Movie Price: <span class="movie-price"></span></p>
+                        <div id="buttons"> </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- footer page -->
+        <div class="footer-clean">
+            <footer>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>Services</h3>
+                            <ul>
+                                <li><a href="#">Ticket Bookings</a></li>
+                                <li><a href="#">Fun and Games</a></li>
+                                <li><a href="#">Snacks</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>About</h3>
+                            <ul>
+                                <li><a href="#">Company</a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">Legacy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>Careers</h3>
+                            <ul>
+                                <li><a href="#">Job openings</a></li>
+                                <li><a href="#">Employee success</a></li>
+                                <li><a href="#">Benefits</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 item social">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <p class="copyright text-center">Tv Movies © 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+</body>
+</html>
