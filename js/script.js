@@ -91,3 +91,45 @@ function attachContactListeners() {
     window.location.href = "ticket.html"
   });
 }
+
+
+$(document).ready(function () {
+  attachContactListeners();
+  $("form").submit(function (event) {
+    event.preventDefault();
+    const inputtedMovieName = $("select#movie-name").val();
+    const inputtedMovieTime = parseInt($("select#movie-seat").val());
+    const inputtedSeatNumber = $("select#movie-time").val();
+    console.log(inputtedMovieName);
+    $("select#movie-name").val("");
+    $("select#movie-seat").val("");
+    $("select#movie-time").val("");
+    let newMovie = new Movie(inputtedMovieName, inputtedMovieTime, inputtedSeatNumber);
+    ticket.addMovie(newMovie);
+    displayMovieDetails(ticket);
+    console.log(ticket.movies);
+
+    if (inputtedMovieName === "Top Gun Maverick") {
+      $("#image1").show("<li >" + inputtedMovieName + " " + inputtedMovieTime + " " + inputtedSeatNumber + "$3000" + "</li>");
+    } else if (inputtedMovieName === "Wakanda Forever") {
+      $("#image2").show("<li >" + inputtedMovieName + " " + inputtedMovieTime + " " + inputtedSeatNumber + "$2500" + "</li>");
+    } else if (inputtedMovieName === "Adams Project") {
+      $("#image3").show("<li >" + inputtedMovieName + " " + inputtedMovieTime + " " + inputtedSeatNumber + "$1500" + "</li>");
+    } else if (inputtedMovieName === "Woman King") {
+      $("#image4").show("<li >" + inputtedMovieName + " " + inputtedMovieTime + " " + inputtedSeatNumber + "$3500" + "</li>");
+    } else if (inputtedMovieName === "Enola Holmes2") {
+      $("#image5").show("<li >" + inputtedMovieName + " " + inputtedMovieTime + " " + inputtedSeatNumber + "$2000" + "</li>");
+    } else if (inputtedMovieName === "Black Adam") {
+      $("#image6").show("<li >" + inputtedMovieName + " " + inputtedMovieTime + " " + inputtedSeatNumber + "$4000" + "</li>");
+    } else if (inputtedMovieName === "Avatar2") {
+      $("#image7").show("<li >" + inputtedMovieName + " " + inputtedMovieTime + " " + inputtedSeatNumber + "$4500" + "</li>");
+    } else {
+
+    }
+  });
+
+  $("#button").click(function () {
+    $("form").hide();
+    $("#last-form").show();
+  });
+});
