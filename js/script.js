@@ -24,3 +24,15 @@ Ticket.prototype.deleteMovie = function (id) {
   delete this.movies[id];
   return true;
 };
+
+// Business Logic for Contacts ---------
+function Movie(movieName, movieSeat, movieTime) {
+  this.movieName = movieName;
+  this.movieSeat = movieSeat;
+  this.movieTime = movieTime;
+}
+
+Movie.prototype.movieDetails = function () {
+  return this.movieName + " " + this.movieSeat + " " + this.movieTime;
+  
+};
