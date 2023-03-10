@@ -36,3 +36,15 @@ Movie.prototype.movieDetails = function () {
   return this.movieName + " " + this.movieSeat + " " + this.movieTime;
   
 };
+// User Interface Logic ---------
+let ticket = new Ticket();
+function displayMovieDetails(ticketToDisplay) {
+  let movieList = $("ol#movies");
+  let htmlForMovieInfo = "";
+  Object.keys(ticketToDisplay.movies).forEach(function (key) {
+    const movie = ticketToDisplay.findMovie(key);
+    htmlForMovieInfo += "<li id=" + movie.id + ">" + movie.movieName + " " + movie.movieSeat + " " + movie.movieTime + "</li>";
+  });
+  console.log(htmlForMovieInfo);
+  movieList.html(htmlForMovieInfo);
+}
