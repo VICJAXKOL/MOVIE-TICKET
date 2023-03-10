@@ -7,7 +7,13 @@ Ticket.prototype.addMovie = function (movie) {
   movie.id = this.assignId();
   this.movies[movie.id] = movie;
 };
-icket.prototype.assignId = function () {
+Ticket.prototype.assignId = function () {
   this.currentId += 1;
   return this.currentId;
+};
+Ticket.prototype.findMovie = function (id) {
+  if (this.movies[id] != undefined) {
+    return this.movies[id];
+  }
+  return false;
 };
