@@ -17,3 +17,10 @@ Ticket.prototype.findMovie = function (id) {
   }
   return false;
 };
+Ticket.prototype.deleteMovie = function (id) {
+  if (this.movies[id] === undefined) {
+    return false;
+  }
+  delete this.movies[id];
+  return true;
+};
